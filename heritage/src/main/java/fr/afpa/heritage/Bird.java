@@ -1,7 +1,5 @@
 package fr.afpa.heritage;
 
-
-
-public class App {
-	
+public class Bird {
+    
 }
