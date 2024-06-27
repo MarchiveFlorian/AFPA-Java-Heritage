@@ -3,7 +3,7 @@ package fr.afpa.heritage;
 public class Fish extends Animal {
 
     // Attributs
-    int preferredWaterDepth;
+    protected int preferredWaterDepth;
 
     // Constructeur
     public Fish(String species, String ecosystem, int preferredWaterDepth) {
@@ -23,9 +23,12 @@ public class Fish extends Animal {
     // Méthodes
     @Override
     public String toString() {
-        return "Fish [preferredWaterDepth=" + preferredWaterDepth + ", species=" + species + ", ecosystem=" + ecosystem
-                + ", getSpecies()=" + getSpecies() + ", getPreferredWaterDepth()=" + getPreferredWaterDepth()
-                + ", getEcosystem()=" + getEcosystem() + "]";
+        return "Fish [species=" + species + ", preferredWaterDepth=" + preferredWaterDepth + ", ecosystem=" + ecosystem
+                + ", LocomotionType=" + displayLocomotionType() + "]";
     }
 
+    @Override
+    public String displayLocomotionType() {
+        return "Nage";
+    }
 }

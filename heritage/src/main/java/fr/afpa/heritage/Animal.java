@@ -1,18 +1,18 @@
 package fr.afpa.heritage;
 
 public abstract class Animal {
-    
-    //Attributs
-    String species;
-    String ecosystem;
 
-    //Constructeur
+    // Attributs
+    protected String species;
+    protected String ecosystem;
+
+    // Constructeur
     public Animal(String species, String ecosystem) {
         this.species = species;
         this.ecosystem = ecosystem;
     }
 
-    //Getters & Setters
+    // Getters & Setters
     public String getSpecies() {
         return species;
     }
@@ -29,4 +29,12 @@ public abstract class Animal {
         this.ecosystem = ecosystem;
     }
 
+    // Méthodes
+    @Override
+    public String toString() {
+        return "Animal [species=" + species + ", ecosystem=" + ecosystem + ", displayLocomotionType()="
+                + displayLocomotionType() + "]";
+    }
+    
+    public abstract String displayLocomotionType();
 }

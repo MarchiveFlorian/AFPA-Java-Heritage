@@ -3,7 +3,7 @@ package fr.afpa.heritage;
 public class Mamal extends Animal {
 
     // Attributs
-    String furColor;
+    protected String furColor;
 
     // Constructeur
     public Mamal(String species, String ecosystem, String furColor) {
@@ -23,9 +23,12 @@ public class Mamal extends Animal {
     // Méthodes
     @Override
     public String toString() {
-        return "Mamal [species=" + species + ", furColor=" + furColor + ", ecosystem=" + ecosystem + ", getSpecies()="
-                + getSpecies() + ", getFurColor()=" + getFurColor() + ", getEcosystem()=" + getEcosystem()
-                + "]";
+        return "Mamal [species=" + species + ", furColor=" + furColor + ", ecosystem=" + ecosystem
+                + ", LocomotionType=" + displayLocomotionType() + "]";
     }
 
+    @Override
+    public String displayLocomotionType() {
+        return "Marche/course/saut";
+    }
 }

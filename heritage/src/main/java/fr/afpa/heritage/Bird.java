@@ -3,7 +3,7 @@ package fr.afpa.heritage;
 public class Bird extends Animal {
 
     // Attributs
-    int wingSpan;
+    protected int wingSpan;
 
     // Constructeur
     public Bird(String species, String ecosystem, int wingSpan) {
@@ -20,13 +20,15 @@ public class Bird extends Animal {
         this.wingSpan = wingSpan;
     }
 
+    // Méthodes
     @Override
     public String toString() {
-        return "Bird [species=" + species + ", wingSpan=" + wingSpan + ", ecosystem=" + ecosystem + ", getWingSpan()="
-                + getWingSpan() + ", getSpecies()=" + getSpecies() + ", getEcosystem()=" + getEcosystem()
-                + "]";
+        return "Bird [species=" + species + ", wingSpan=" + wingSpan + ", ecosystem=" + ecosystem
+                + ", LocomotionType=" + displayLocomotionType() + "]";
     }
 
-    // Méthodes
-
+    @Override
+    public String displayLocomotionType() {
+        return "Vol";
+    }
 }
